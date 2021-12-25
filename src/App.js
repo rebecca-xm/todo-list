@@ -24,7 +24,7 @@ function App() {
           break;
       }
     };
-    
+
     filterHandler();
   }, [todos, status]);
 
@@ -40,7 +40,7 @@ function App() {
   //       setFilteredTodos(todos);
   //       break;
   //   }
-  // };
+  // }; 
 
   return (
     <div className="App">
