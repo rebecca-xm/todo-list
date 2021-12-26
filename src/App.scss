@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -6,10 +8,11 @@
 
 body {
   background-image: radial-gradient(circle, rgba(174,217,238,1) 0%, rgba(40,102,139,1) 100%);
-  color: white;
-  font-family: "Poppins", sans-serif;
+  color: #123041;
+  font-family: 'Bebas Neue', cursive;
   min-height: 100vh;
 }
+
 header {
   font-size: 2rem;
 }
@@ -42,7 +45,7 @@ form button:hover {
   color: white;
 }
 
-.todo-container {
+.todoContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,7 +67,7 @@ form button:hover {
   transition: all 1s ease;
 }
 
-.filter-todo {
+.filterTodo {
   padding: 1rem;
 }
 
@@ -72,8 +75,8 @@ form button:hover {
   flex: 1;
 }
 
-.trash-btn,
-.complete-btn {
+.trashBtn,
+.completeBtn {
   background: #28668b;
   color: white;
   border: none;
@@ -82,11 +85,11 @@ form button:hover {
   font-size: 1rem;
 }
 
-.complete-btn {
+.completeBtn {
   background: rgb(11, 212, 162);
 }
 
-.todo-item {
+.todoItem {
   padding: 0rem 0.5rem;
 }
 
@@ -107,10 +110,6 @@ form button:hover {
 
 /*CUSTOM SELECTOR */
 select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
   outline: 0;
   box-shadow: none;
   border: 0 !important;
