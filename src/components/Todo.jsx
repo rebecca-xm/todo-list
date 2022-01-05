@@ -2,6 +2,16 @@ import { useState } from "react";
 import Modal from "./Modal";
 
 const Todo = ({ text, todo, todos, setTodos }) => {
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+    const openModalHandler = () => {
+        // console.log('funziona!');
+        setModalIsOpen(true);
+    };
+
+    const closeModalHandler = () => {
+        setModalIsOpen(false);
+    };
+
     const deleteHandler = () => {
         setTodos(todos.filter(el => el.id !== todo.id));
     };
@@ -16,17 +26,6 @@ const Todo = ({ text, todo, todos, setTodos }) => {
             return item;
         })
         );
-    };
-
-    const [modalIsOpen, setModalIsOpen] = useState(false);
-
-    function openModalHandler() {
-        // console.log('funziona!');
-        setModalIsOpen(true);
-    };
-
-    function closeModalHandler() {
-        setModalIsOpen(false);
     };
 
     return (
