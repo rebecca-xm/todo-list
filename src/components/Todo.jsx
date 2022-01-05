@@ -1,3 +1,6 @@
+import { useState } from "react";
+import Modal from "./Modal";
+
 const Todo = ({ text, todo, todos, setTodos }) => {
     const deleteHandler = () => {
         setTodos(todos.filter(el => el.id !== todo.id));
@@ -15,15 +18,29 @@ const Todo = ({ text, todo, todos, setTodos }) => {
         );
     };
 
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+
+    function openModalHandler() {
+        // console.log('funziona!');
+        setModalIsOpen(true);
+    };
+
+    function closeModalHandler() {
+        setModalIsOpen(false);
+    };
+
     return (
         <div className="todo">
             <li className={`todoItem ${todo.completed ? 'completed' : ''}`}>{text}</li>
             <button onClick={completeHandler} className="completeBtn">
                 <i className="fas fa-check"></i>
             </button>
-            <button onClick={deleteHandler} className="trashBtn">
+            <button onClick={openModalHandler} className="trashBtn">
                 <i className="fas fa-trash"></i>
             </button>
+            {modalIsOpen ? <Modal
+                onCancel={closeModalHandler}
+                onConfirm={deleteHandler} /> : null}
         </div>
     );
 };

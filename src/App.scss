@@ -141,3 +141,47 @@ select {
   cursor: pointer;
   pointer-events: none;
 }
+
+/* MODAL */
+.modal {
+  position: fixed;
+  background-color: white;
+  border-radius: 6px;
+  text-align: center;
+  color: #123041;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+
+  width: 30rem;
+  top: 30vh;
+  left: calc(50% - 15rem);
+  padding: 1rem;
+
+  z-index: 10;
+}
+
+.btn {
+  background-color: #28668b;
+  border: 1px solid #28668b;
+  border-radius: 4px;
+  color: white;
+  font: inherit;
+
+  padding: 0.5rem 1.5rem;
+  margin: 0 1rem;
+
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #123041;
+  border-color: #123041;
+}
+
+.del {
+  background-color: transparent;
+  color: #123041;
+}
+
+.del:hover {
+  background-color: #fff;
+}
