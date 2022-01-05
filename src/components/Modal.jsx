@@ -1,10 +1,10 @@
-const Modal = (props) => {
-    function confirmHandler() {
-        props.onConfirm();
+const Modal = ({ onConfirm, onCancel }) => {
+    const confirmHandler = () => {
+        onConfirm();
     };
 
-    function cancelHandler() {
-        props.onCancel();
+    const cancelHandler = () => {
+        onCancel();
     };
 
     return (
